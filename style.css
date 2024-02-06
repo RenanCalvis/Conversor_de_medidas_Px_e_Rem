@@ -252,6 +252,7 @@ pre code {
 .footer_contato span{
     font-size: 2rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .footer_redes{
