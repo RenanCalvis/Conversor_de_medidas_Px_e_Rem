@@ -131,8 +131,12 @@ label{
     border-radius: 4px;
     border: none;
     background: var(--input-bg-conversor-color);
-    outline: 4px solid var(--input-conversor-color);
+    outline: 4px solid var(--input-bg-conversor-color);
     
+}
+
+.input_style:focus {
+    outline: 4px solid var(--outline-focus);
 }
 
 .inputPx{
@@ -161,9 +165,6 @@ label{
     bottom: 10px;
 }
 
-.input_style:focus {
-    outline: 4px solid var(--outline-focus);
-}
 
 .conversor span{
     font-family: 'Inter';
