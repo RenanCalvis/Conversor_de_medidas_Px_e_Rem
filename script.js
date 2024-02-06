@@ -26,3 +26,20 @@ RemToPix = (remvalue) => {
     }
     return (remvalue * 16).toString();
 }
+
+const message = document.getElementById('message');
+const emailLink = document.getElementById('emailCopy');
+emailLink.addEventListener('click', () => {
+    const textToCopy = emailLink.innerHTML;
+
+    navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+            message.style.display = 'block'
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 2000);
+        })
+        .catch(err => {
+            console.error('Erro ao copiar texto: ', err);
+        });
+});

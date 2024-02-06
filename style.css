@@ -1,12 +1,12 @@
 :root {
-    ---primary-text-color: #1F0F35;
+    --primary-text-color: #1F0F35;
     --secondary-text-color: #3e3b42;
     --outline-focus: #FC8D37;
     --label-conversor-color:#fff;
-    --input-conversor-color:#fff;
+    --input-bg-conversor-color:#fff;
+    --nav-text-color:#fff;
     --gradiente-conversor: linear-gradient(120deg,#5628BE, #7227BF);
     --gradiente-components: linear-gradient(90deg, #241A69 0%, #623B7D 100%);
-    --gradiente-components-test: linear-gradient(90deg, red 50%, blue 50%);
   }
 
 body{ 
@@ -53,11 +53,11 @@ p{
 }
 .conversor_container p{
     font-weight: 600;
-    color: var(---primary-text-color);
+    color: var(--primary-text-color);
 }
 
 p span{
-    color:#d86b05
+    color:#974507;
 }
 
 
@@ -79,7 +79,7 @@ p span{
     margin: 0 auto;
     padding: 20px;
     justify-content: end;
-    color: var(--input-conversor-color);
+    color: var(--nav-text-color);
     font-weight: 400;
 }
 
@@ -130,7 +130,7 @@ label{
     padding: 10px;
     border-radius: 4px;
     border: none;
-    background: var(--input-conversor-color);
+    background: var(--input-bg-conversor-color);
     outline: 4px solid var(--input-conversor-color);
     
 }
@@ -143,7 +143,7 @@ label{
     content: 'px';
     display: flex;
     position: absolute;
-    color: var(---primary-text-color);
+    color: var(--primary-text-color);
     right: 10px;
     bottom: 10px;
 }
@@ -156,7 +156,7 @@ label{
     content: 'rem';
     display: flex;
     position: absolute;
-    color: var(---primary-text-color);
+    color: var(--primary-text-color);
     right: 10px;
     bottom: 10px;
 }
@@ -186,8 +186,6 @@ label{
     margin-bottom: 12px;
 }
 
-
-
 pre {
     background-color: #f7f7f7;
     border: 1px solid #ccc;
@@ -195,7 +193,7 @@ pre {
     margin: 0;
     padding: 10px;
     overflow: auto;
-    white-space: pre-line; /* Esta propriedade mantém as quebras de linha e ignora espaços extras no início */
+    white-space: pre-line;
     tab-size: 4;
     line-height: 1.5;
     margin-bottom: 15px;
@@ -210,23 +208,23 @@ pre code {
 }
 
 .property {
-    color: #e60000; /* Cor para propriedades */
+    color: #8f0000; 
 }
 
 .colon {
-    color: #333; /* Cor para dois pontos */
+    color: #333;
 }
 
 .value {
-    color: #0271f0; /* Cor para valores */
+    color: #064893; 
 }
 
 .number {
-    color: #02744a; /* Cor para números */
+    color: #005c3a; 
 }
 
 .comment {
-    color: #313030; /* Cor para comentários */
+    color: #313030; 
 }
 
 .footer{
@@ -240,18 +238,18 @@ pre code {
     grid-template-columns: 1fr 1fr;
     gap: 120px;
     align-items: center;
-    color: var(--input-conversor-color);
+    color: var(--nav-text-color);
 }
 .footer_container p{
     font-size: 1.5rem;
     max-width: 26ch;
 } 
 
-.footer_contato a, .footer_redes{
+.footer_contato span, .footer_redes{
     display: flex;
     justify-content: end;
 }
-.footer_contato a{
+.footer_contato span{
     font-size: 2rem;
     font-weight: bold;
 }
@@ -259,6 +257,21 @@ pre code {
 .footer_redes{
     gap: 40px;
     margin-top: 20px;
+}
+
+.message {
+    position: fixed;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: #fff; 
+    padding: 15px 20px; 
+    border-radius: 10px; 
+    display: none;
+}
+.message img{
+    padding-left: 5px;
 }
 
 @media (max-width: 750px){
@@ -300,11 +313,17 @@ pre code {
         padding: 35px 0px;
         place-content: center;
     }
-    .footer_contato a, .footer_redes{
+    .footer_contato span, .footer_redes{
         justify-content: center;
     }
     .footer_container p{
         justify-self: center;
     }
-
+    .message {
+        padding: 20px;
+        white-space: nowrap; 
+    }
+    .message img{
+        padding: 0 5px;
+    }
 }

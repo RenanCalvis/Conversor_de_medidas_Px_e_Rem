@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conversor de medidas entre Px e Rem.">
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <title>conversor de Px para Rem</title>
+    <title>Conversor entre Px e Rem</title>
 </head>
 <body>
     <header class="header_bg">
@@ -42,7 +43,7 @@
         <section id="PxvsRem" class="conteudo_pxvsrem">
             <h2 class="conteudo_title">Unidades de medida em CSS: Pixels(px) e Rem:</h2>
             <p>Pixels são unidades de medida comumente usadas em CSS para definir tamanhos de fonte e dimensões de elementos. Um pixel é a menor unidade de exibição em um monitor. Quando você define um tamanho em pixels, ele será consistente em todos os dispositivos, mas pode não se ajustar bem em dispositivos com diferentes densidades de tela.</p>
-            <p>Rem (Root em) é uma unidade relativa em relação ao tamanho da fonte do elemento raiz, normalmente o <code>&lt;html&gt;</code>. Isso torna o rem útil para criar layouts escaláveis e responsivos. Se você alterar o tamanho da fonte no elemento raiz, todos os elementos REM na página serão ajustados proporcionalmente, facilitando a criação de layouts que se adaptam a diferentes tamanhos de tela.</p>
+            <p>Rem (Root em) é uma unidade relativa em relação ao tamanho da fonte do elemento raiz, normalmente o <code>&lt;html&gt;</code>. Isso torna o rem útil para criar layouts escaláveis e responsivos. Se você alterar o tamanho da fonte no elemento raiz, todos os elementos REM na página serão ajustados proporcionalmente, facilitando a criação de layouts que se adaptam a diferentes tamanhos de tela.<br>Exemplo:</p>
 
             <pre>
                 <code>
@@ -58,7 +59,7 @@
             
 
             <h3 class="conteudo_title">Mas e o EM?</h3>
-            <p>Bom, o em é a unidade relativa ao tamanho da fonte do elemento pai mais próximo que tenha um tamanho de fonte especificado. Sua principal diferença está em qual elemento define o tamanho base. O rem sempre é relativo ao tamanho da fonte do elemento raiz, enquanto o em é relativo ao tamanho da fonte do elemento pai mais próximo com um tamanho de fonte especificado.</p>
+            <p>Bom, o em é a unidade relativa ao tamanho da fonte do elemento pai mais próximo que tenha um tamanho de fonte especificado. Sua principal diferença está em qual elemento define o tamanho base. O rem sempre é relativo ao tamanho da fonte do elemento raiz, enquanto o em é relativo ao tamanho da fonte do elemento pai mais próximo com um tamanho de fonte especificado.<br>Exemplo:</p>
             <pre>
                 <code>
                     <span class="property">body</span> {
@@ -67,23 +68,25 @@
             
                     <span class="property">div</span> {
                         <span class="value">font-size</span>: <span class="number">1.5em</span>; <span class="comment">/* 1.5 vezes o tamanho da fonte do elemento pai (body) */</span>
+                    }
                 </code>
             </pre>
         </section>
     </main>
+    <div id="message" class="message">Copiado para área de transferência <img src="img/ok.svg" alt=""></div>
     <footer id="Contato" class="footer">
         <div class="footer_container ">
             <p>Estou em constante evolução. Se quiser acompanhar futuros projetos ou trocar ideias comigo, é só me chamar! 👋</p>
             <div class="footer_contato">
-                <a>renancalvis@gmail.com</a>
+                <span id="emailCopy">renancalvis@gmail.com</span>
                 <ul class="footer_redes">
                     <li>
-                        <a href="https://www.linkedin.com/in/renancalvis/">
+                        <a href="https://www.linkedin.com/in/renancalvis/" target="_blank">
                             <img src="img/linkedin.svg" alt="Linkedin Logo">
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/RenanCalvis/">
+                        <a href="https://github.com/RenanCalvis/" target="_blank">
                             <img src="img/github.svg" alt="Github Logo">
                         </a>
                     </li>
