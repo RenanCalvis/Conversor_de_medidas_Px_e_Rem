@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary-text-color: #1f0f35;
   --secondary-text-color: #3e3b42;
